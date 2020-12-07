@@ -1,2 +1,37 @@
 28-11-20
 Hola, soy Santi, cree mi changelog para mi proyecto multijugador.
+
+07 - 12 - 20
+ÚLTIMA SEMANA DE PROYECTO FINAL.
+
+En esta semana ya se registro los documentos y el MVP de mi proyecto multijugador en esta recta final del semestre, en donde se cumplieron las siguientes funciones o aspectos que se propusieron desde un principio del semestre:
+- Multijugador local.
+- Controlador del jugador.
+- Bucle del juego completo.
+- 1 arma terminada.
+- Flujo de pantallas completo: 
+	-SplashScreens.
+	-Screen del juego.
+	-Menú:
+		--Jugar.
+		--Cómo jugar.
+		--Créditos.
+	-Pantalla del juego (AQUI COMIENZA EL JUEGO).
+	-Pantalla final del juego:
+		--Ganador 1 ó 2.
+		--Empate.
+- Timer de la partida de 15 minutos.
+- Sistema de turnos (por tecla) ("O" turno del primer jugador y "P" turno 				del segundo jugador).
+- UI interactiva.
+- Creación de terreno/mapa (súper boceto).
+
+Y quedaron por implementarse:
+- Multijugador en línea.
+- Power ups.
+- Más armas.
+- Mejor implementación del diseño "asimétrico".
+- Inventario del jugador.
+- UI estática.
+- Funciones del Network.
+- Creación de terreno destruible.
+- Grid hexagonal.
