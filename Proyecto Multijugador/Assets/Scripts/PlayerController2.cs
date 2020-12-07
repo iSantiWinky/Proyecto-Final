@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
     Rigidbody2D mRigidbody2D;
     public float speed = 1f;
@@ -18,9 +17,9 @@ public class PlayerController : MonoBehaviour
     public HealthBar healthBar;
 
     public float hitPoints;
-    private float maxPoints =  10;
+    private float maxPoints = 10;
 
-    public GameObject p2Wins;
+    public GameObject p1wins;
 
 
     void Start()
@@ -32,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
         turnSystem = GameObject.Find("Turn-basedSystem").GetComponent<TurnSystem>();
 
-        foreach(TurnClass tc in turnSystem.playersGroup)
+        foreach (TurnClass tc in turnSystem.playersGroup)
         {
             if (tc.playerGameObject.name == gameObject.name) turnClass = tc;
         }
@@ -57,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
         }
@@ -65,27 +64,25 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-            if (Input.GetKey(KeyCode.D))
-                {
-                    transform.Translate(Vector2.right * speed);
-                    GetComponent<SpriteRenderer>().flipX = true;
-                }
-            if (Input.GetKey(KeyCode.A))
-                {
-                    transform.Translate(Vector2.left * speed);
-                    GetComponent<SpriteRenderer>().flipX = false;
-                }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector2.right * speed);
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector2.left * speed);
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     public void TakeHit(float damage)
     {
         hitPoints -= damage;
-        if(hitPoints == 0)
+        if (hitPoints == 0)
         {
             Destroy(gameObject);
-            p2Wins.SetActive(true);
-
+            p1wins.SetActive(true);
         }
-
     }
 }
