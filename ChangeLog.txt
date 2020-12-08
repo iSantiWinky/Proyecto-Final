@@ -35,3 +35,15 @@ Y quedaron por implementarse:
 - Funciones del Network.
 - Creación de terreno destruible.
 - Grid hexagonal.
+
+Lo cual, el siguiente orden muestra la secuencia en la que se fue realizando los features:
+- Controlador del personaje.
+- Creación de terreno (muy boceto).
+- Multijugador local.
+- Timer de la partida.
+- 1 arma.
+- Flujo de pantallas (la mitad).
+- Implementación del segundo personaje.
+- Sistema de turnos.
+- Bucle del juego completo.
+- Flujo de pantallas (terminado).
